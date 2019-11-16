@@ -1,0 +1,42 @@
+.data
+space: .asciiz " "
+newLine: .asciiz "\n"
+takeUp: .space 0
+
+.text
+j main
+main:
+sw $fp, 0($sp)
+subi $sp,$sp,4
+move $fp,$sp
+sw $a0, 0($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+sw $ra, -16($fp)
+sw $t0, -20($fp)
+sw $t1, -24($fp)
+sw $t2, -28($fp)
+sw $t3, -32($fp)
+sw $t4, -36($fp)
+sw $t5, -40($fp)
+sw $t6, -44($fp)
+sw $t7, -48($fp)
+subi $sp,$sp,48
+subi $sp, $sp, 0
+subi $sp,$sp,4
+li $k0 111
+li $k1,0
+sub $t1, $k0, $k1
+move $k0, $t1
+blez $k0 Label1
+li $k0 98
+li $k1 'd'
+add $t2, $k0, $k1
+move $a0, $t2
+li $v0, 1
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+Label1:

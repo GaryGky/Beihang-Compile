@@ -1,0 +1,9 @@
+const char cc= d
+const int aa= 111
+const int bb= 98
+int main () 
+T1 = aa  - 0
+BLEZ T1, Label1
+T2 = bb  + cc
+Print Int T2
+Label1:

@@ -1,0 +1,8 @@
+const char cc = 'd';
+const int aa = 111, bb = 98;
+
+void main() {
+    if(aa){
+        printf(bb + cc);
+    }
+}
