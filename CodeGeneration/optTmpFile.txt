@@ -1,0 +1,28 @@
+int func1 () 
+para int a
+$t1 = a  - 0
+BLEZ $t1, Label1
+RET a
+Goto Label2
+Label1:
+Print Int a
+$t2 = a  + 1
+a= $t2
+Print Int a
+Label2:
+RET a
+Void func2 () 
+var int a
+a= 0
+a= 10
+Label3:
+$t3 = a  - 0
+BLZ $t3, Label4
+Print String Str1
+a = a  - 1
+Goto Label3
+Label4:
+RET
+RET
+Void main () 
+Print String Str2

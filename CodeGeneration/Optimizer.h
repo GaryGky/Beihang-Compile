@@ -1,56 +1,59 @@
 //
-// Created by dell on 2019/11/11.
+// Created by dell on 2019/11/30.
 //
 
-#ifndef CODEGENPROEJCT_OPTIMIZER_H
-#define CODEGENPROEJCT_OPTIMIZER_H
+#ifndef CODEORIENTOPT_OPTIMIZER_H
+#define CODEORIENTOPT_OPTIMIZER_H
 
 #include "FourComExpr.h"
-#include "SymbolTabel.h"
+#include <iostream>
 #include <fstream>
 #include <map>
+#include "BasicBlock.h"
+#include "FlowGraph.h"
 
-struct LocalVarible{
-    RetType varType; // 变量的类型
-    string varName; // 变量的名称
-    string varScope; // 变量的作用域
-    int order; // 变量的序号
-};
+using namespace std;
 
-class Optimizer {
+class Optimizer { // 顶端的程序层
 private:
-    vector<FourComExpr> tmpCodeVector; // 保存中间代码的向量
-    SymbolTabel symbolTabel; // 全局符号表
-    ofstream mipsFile;
-    unsigned strMemSize = 0;//字符串占据的大小
-    string codeScope; // 当前正在分析的区域
-    int varCnt; // 函数局部变量的计数器
-    map<string, LocalVarible> nameToLocalVar; // 函数局部变量的索引
+    vector<FourComExpr> originTmpCode; // 原始中间代码
+    vector<FourComExpr> optTmpCode; // 优化后的中间代码
+    ofstream optTmpFile;
+    map<string, FlowGraph> funcToGraph; // 通过函数名称来寻找流图 :: 两者也可以通过下标进行捆绑索引
+    vector<string> funcVec; // 函数名称
+    vector<FlowGraph> graphVec; // 函数对应流图
 public:
-    explicit Optimizer(vector<FourComExpr> &tmpCode, SymbolTabel &symbolTabel1);
+    explicit Optimizer(vector<FourComExpr> &tmpCode);
 
-    void genMipsCode();
+    void orientCodeOpt(); // 面向代码的优化
+    // 将语句序列按照函数作用域划分
+    void divideByFunc();
 
-    void getNewLine(); // 换行
-    void getSpace(); // 空格 :: 是关于MIPs IO 的输出
-    void genDataSegment(); // 产生data段的数据
-    void genTextSegment(); // 产生text段的数据
-    void genAssignCode(FourComExpr &fourComExpr); // 产生赋值语句的mips
-    void genExprCode(FourComExpr &fourComExpr);
+    // 总控开关 :: 控制每一个函数的流通进行数据流动
+    void buildFlowGraph();
 
-    void genFuncDefCode(FourComExpr &fourComExpr); // 产生函数定义的mips代码
-    void genReturnCode(FourComExpr &fourComExpr); // 产生函数返回的代码
-    void genFuncRefCode(FourComExpr &fourComExpr); // 产生函数调用的代码
+    // 总控开关 :: 控制每一个函数进行活跃变量分析
+    void buildActiveVar();
 
-    string getGloabalAddr(const string &varName, const string &dstReg); // 获取全局变量的地址 --- 赋值语句的左边
-    string getLocalAddr(const string &varScope, int order, const string &dstReg); // 获取局部变量的地址 --- 赋值语句的左边
-    string getTempReg(const string &tempReg, const string &dstReg); // 获取临时变量的寄存器值
-    void initialStack(const string &funcName); // 初始化函数的运行栈
-    void keepScene(); // 保存现场
-    void getArrayValue(const string &arrayName, const string &offset,const string &dstReg); // 获取数组元素的值
-    void getArrayAddr(const string &arrayName, const string &offset,const string &dstReg); // 获取数组元素的地址
-    void getParaValue(int paraOrder, const string &dstReg);
+    // 控制每一个函数(流图)的定义-使用 冲突关系
+    void buildDefConv();
+
+    // 构建函数内联关系
+    void buildInlineFunc();
+
+    /* 以下为面向代码的优化 :: 稍作了函数内联 */
+    void optFactorial(); // 优化第一步 --- 阶乘递归的优化 减少了300
+    void optSwap(); // 优化第二补 --- 交换函数的优化
+    void optMod(); // 优化取余函数
+    void optFull_Num(); // 优化这个函数
+    void optFlowerArea(); // 优化这块区域
+    void optRidDeadCode(); // 删除循环体内的死代码
+    void genTmpCode();
+
+    vector<FourComExpr> &getOptCode() {
+        return optTmpCode;
+    }
 };
 
 
-#endif //CODEGENPROEJCT_OPTIMIZER_H
+#endif //CODEORIENTOPT_OPTIMIZER_H

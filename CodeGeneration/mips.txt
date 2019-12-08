@@ -1,42 +1,140 @@
 .data
 space: .asciiz " "
 newLine: .asciiz "\n"
-takeUp: .space 0
+Str1: .asciiz ""
+Str2: .asciiz "hello world"
+takeUp: .space 3
 
 .text
 j main
-main:
+func1:
 sw $fp, 0($sp)
-subi $sp,$sp,4
+addi $sp,$sp,-4
 move $fp,$sp
-sw $a0, 0($fp)
-sw $a1, -4($fp)
-sw $a2, -8($fp)
-sw $a3, -12($fp)
+addi $sp,$sp,-48
+addi $sp,$sp,-4
 sw $ra, -16($fp)
-sw $t0, -20($fp)
-sw $t1, -24($fp)
-sw $t2, -28($fp)
-sw $t3, -32($fp)
-sw $t4, -36($fp)
-sw $t5, -40($fp)
-sw $t6, -44($fp)
-sw $t7, -48($fp)
-subi $sp,$sp,48
-subi $sp, $sp, 0
-subi $sp,$sp,4
-li $k0 111
-li $k1,0
-sub $t1, $k0, $k1
-move $k0, $t1
-blez $k0 Label1
-li $k0 98
-li $k1 'd'
-add $t2, $k0, $k1
-move $a0, $t2
+subi $t1 $a0 0
+blez $t1 Label1
+move $v0 $a0
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $a0, 0($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+lw $t0, -20($fp)
+lw $t1, -24($fp)
+lw $t2, -28($fp)
+lw $t3, -32($fp)
+lw $t4, -36($fp)
+lw $t5, -40($fp)
+lw $t6, -44($fp)
+lw $t7, -48($fp)
+jr $ra
+j Label2
+Label1:
 li $v0, 1
 syscall
 la $a0, newLine
 li $v0, 4
 syscall
-Label1:
+addi $t2 $a0 1
+move $a0 $t2
+li $v0, 1
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+Label2:
+move $v0 $a0
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $a0, 0($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+lw $t0, -20($fp)
+lw $t1, -24($fp)
+lw $t2, -28($fp)
+lw $t3, -32($fp)
+lw $t4, -36($fp)
+lw $t5, -40($fp)
+lw $t6, -44($fp)
+lw $t7, -48($fp)
+jr $ra
+func2:
+sw $fp, 0($sp)
+addi $sp,$sp,-4
+move $fp,$sp
+addi $sp,$sp,-48
+addi $sp, $sp, -4
+addi $sp,$sp,-4
+sw $ra, -16($fp)
+addi $t8, $fp -52
+sw 0 ,0($t8)
+addi $t8, $fp -52
+sw 10 ,0($t8)
+Label3:
+addi $t8, $fp -52
+lw $k0, 0($t8)
+subi $t3 $k0 0
+bltz $t3 Label4
+la $a0, Str1
+li $v0, 4
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+addi $t8, $fp -52
+lw $k0, 0($t8)
+subi a $k0 1
+j Label3
+Label4:
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $a0, 0($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+lw $t0, -20($fp)
+lw $t1, -24($fp)
+lw $t2, -28($fp)
+lw $t3, -32($fp)
+lw $t4, -36($fp)
+lw $t5, -40($fp)
+lw $t6, -44($fp)
+lw $t7, -48($fp)
+jr $ra
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $a0, 0($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+lw $t0, -20($fp)
+lw $t1, -24($fp)
+lw $t2, -28($fp)
+lw $t3, -32($fp)
+lw $t4, -36($fp)
+lw $t5, -40($fp)
+lw $t6, -44($fp)
+lw $t7, -48($fp)
+jr $ra
+main:
+sw $fp, 0($sp)
+addi $sp,$sp,-4
+move $fp,$sp
+addi $sp,$sp,-48
+addi $sp,$sp,-4
+sw $ra, -16($fp)
+la $a0, Str2
+li $v0, 4
+syscall
+la $a0, newLine
+li $v0, 4
+syscall

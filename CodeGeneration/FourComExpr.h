@@ -21,12 +21,11 @@
 11.read int a, read char c // 输入语句的定义
 */
 enum TmpCodeType {
-    StringOutput, // 等待输出的字符串
     FunctionCall, // 函数调用
     AssignState, // 赋值语句
     Label, // 标签
     VaribleDef, // 变量定义
-    arrayDef, // 数组定义
+    ArrayDef, // 数组定义
     ConstantDef, // 常量定义
     FunctionDef, // 函数定义
     Expression, // 表达式
@@ -43,10 +42,6 @@ enum TmpCodeType {
     PrintInt, // 输出整数
     PrintChar, // 输出字符
     PrintNewLine, // 换行
-    /*ReturnInt,
-    ReturnChar,
-    ReturnId,
-    ReturnEmpty,*/ // 统一归为return
     Return, // 返回语句
     Default
 };

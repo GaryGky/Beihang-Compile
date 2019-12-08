@@ -331,8 +331,8 @@ array:.space 28 // 为数组分配空间，一个int类型占4字节
 
 ```
 string Optimizer::getTempReg(const string &tempReg, const string &dstReg) {
-    string order = tempReg.substr(1, tempReg.length() - 1);
-    mipsFile << "move " << dstReg << ", $t" + to_string(stoi(order) % 8) << endl;
+    string localOffset = tempReg.substr(1, tempReg.length() - 1);
+    mipsFile << "move " << dstReg << ", $t" + to_string(stoi(localOffset) % 8) << endl;
     return dstReg; // 这里返回什么还没想好
 }
 // 可以保证表达式所用的寄存器编号不超过 8
