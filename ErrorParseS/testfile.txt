@@ -1,0 +1,42 @@
+int a,c;
+char b,d;
+int f1(int a1, int b1){return (1);}
+
+int f2(char a1, char b1){return (1);}
+
+int f3(int a3, char b3){return (1);}
+
+int f4(int a4, char a5){
+return (1);
+}
+
+int f5(){
+return (1);
+}
+
+void main(){
+    char a,c;
+    int b,d;
+    f1();
+    f1('a','b');
+    f1(a,'a');
+    f1(1,2);
+
+    f2(1,2);
+    f2();
+    f2(1,'o');
+    f2(a,c);
+
+    f3(a,b);
+    f3();
+    f3(1,a,b);
+    f3(b,5,'a');
+
+    f4();
+    f4(a,b);
+    f4(a,a,a,b);
+
+    f5(a);
+    f5();
+    f5(b);
+}

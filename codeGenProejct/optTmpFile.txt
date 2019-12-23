@@ -1,0 +1,392 @@
+array int x[100]
+array int y[100]
+array int num[100]
+int Middle_Number_1 () 
+para int N
+var int middle_n
+var int i
+var int j
+var int biggest
+var int biggest_tag
+var int intermediate
+array int num_copy[100]
+$s0 = N  / 2
+$s3= 0
+$s1= 0
+$s5 = 0  - 1
+$s4 = 0  - 1
+$s2= 0
+$s3= 0
+Label1:
+$s2 = num[$s3] + 0
+$v1= $s3
+num_copy[$v1]= $s2
+$s3 = $s3  + 1
+BGE $s3, N, Label2
+Goto Label1
+Label2:
+$s3= 0
+Label3:
+$s1= 0
+$s5 = 0  - 1
+$s4 = 0  - 1
+$s1= 0
+Label5:
+$t0 = N  - $s3
+BGE $s1, $t0, Label6
+$t1 = num_copy[$s1] + 0
+BLE $t1, $s5, Label7
+$s5 = num_copy[$s1] + 0
+$s4= $s1
+Label7:
+$s1 = $s1  + 1
+Goto Label5
+Label6:
+$t4 = N  - 1
+$t5 = $t4  - $s3
+$s2 = num_copy[$t5] + 0
+$t7 = N  - 1
+$t0 = $t7  - $s3
+$v1= $t0
+num_copy[$v1]= $s5
+$v1= $s4
+num_copy[$v1]= $s2
+$s3 = $s3  + 1
+BGE $s3, N, Label4
+Goto Label3
+Label4:
+$t2 = num_copy[$s0] + 0
+RET $t2
+int Middle_Number_2 () 
+para int N
+var int middle_n
+var int i
+var int j
+var int biggest
+var int biggest_tag
+var int intermediate
+array int num_copy[100]
+$s0 = N  / 2
+$s3= 0
+$s1= 0
+$s5 = 0  - 1
+$s4 = 0  - 1
+$s2= 0
+$s3= 0
+$s3= 0
+Label9:
+BGE $s3, N, Label10
+$s2 = num[$s3] + 0
+$v1= $s3
+num_copy[$v1]= $s2
+$s3 = $s3  + 1
+Goto Label9
+Label10:
+$s3= 0
+$s3= 0
+Label11:
+BGE $s3, N, Label12
+$s1= 0
+$s5 = 0  - 1
+$s4 = 0  - 1
+Label13:
+$t2 = N  - $s3
+BGE $s1, $t2, Label14
+$t3 = num_copy[$s1] + 0
+BLE $t3, $s5, Label15
+$s5 = num_copy[$s1] + 0
+$s4= $s1
+Label15:
+$s1 = $s1  + 1
+Goto Label13
+Label14:
+$t6 = N  - 1
+$t7 = $t6  - $s3
+$s2 = num_copy[$t7] + 0
+$t1 = N  - 1
+$t2 = $t1  - $s3
+$v1= $t2
+num_copy[$v1]= $s5
+$v1= $s4
+num_copy[$v1]= $s2
+$s3 = $s3  + 1
+Goto Label11
+Label12:
+$t4 = num_copy[$s0] + 0
+RET $t4
+int Middle_Number_3 () 
+para int N
+var int middle_n
+var int i
+var int j
+var int biggest
+var int biggest_tag
+var int intermediate
+array int num_copy[100]
+$s0 = N  / 2
+$s3= 0
+$s1= 0
+$s5 = 0  - 1
+$s4 = 0  - 1
+$s2= 0
+$s3= 0
+Label17:
+BGE $s3, N, Label18
+$s2 = num[$s3] + 0
+$v1= $s3
+num_copy[$v1]= $s2
+$s3 = $s3  + 1
+Goto Label17
+Label18:
+$s3= 0
+Label19:
+BGE $s3, N, Label20
+$s1= 0
+$s5 = 0  - 1
+$s4 = 0  - 1
+$s1= 0
+Label21:
+$t4 = N  - $s3
+BGE $s1, $t4, Label22
+$t5 = num_copy[$s1] + 0
+BLE $t5, $s5, Label23
+$s5 = num_copy[$s1] + 0
+$s4= $s1
+Label23:
+$s1 = $s1  + 1
+Goto Label21
+Label22:
+$t0 = N  - 1
+$t1 = $t0  - $s3
+$s2 = num_copy[$t1] + 0
+$t3 = N  - 1
+$t4 = $t3  - $s3
+$v1= $t4
+num_copy[$v1]= $s5
+$v1= $s4
+num_copy[$v1]= $s2
+$s3 = $s3  + 1
+Goto Label19
+Label20:
+$t6 = num_copy[$s0] + 0
+RET $t6
+int Nearest_Point_1 () 
+para int n
+para int N
+var int i
+var int j
+var int distance
+var int tag
+$s2= 2147483647
+$s0 = 0  - 1
+$s1= 0
+Label25:
+$t0 = x[n] - x[$s1] 
+$t1 = x[n] - x[$s1] 
+$t2 = y[n] - y[$s1] 
+$t3 = y[n] - y[$s1] 
+$t4 = $t0  * $t1
+$t5 = $t2  * $t3
+$t6 = $t4  + $t5
+BGE $t6, $s2, Label27
+BEQ $s1, n, Label29
+$t7 = x[n] - x[$s1] 
+$t0 = x[n] - x[$s1] 
+$t1 = y[n] - y[$s1] 
+$t2 = y[n] - y[$s1] 
+$t3 = $t7  * $t0
+$t4 = $t1  * $t2
+$s2 = $t3  + $t4
+$s0= $s1
+Label29:
+Label27:
+$s1 = $s1  + 1
+BGE $s1, N, Label26
+Goto Label25
+Label26:
+$t7 = 0  - 1
+BNE $s0, $t7, Label31
+Print String Str1
+Label31:
+RET $s0
+int Nearest_Point_2 () 
+para int n
+para int N
+var int i
+var int j
+var int distance
+var int tag
+$s2= 2147483647
+$s0 = 0  - 1
+$s1= 0
+$s1= 0
+Label33:
+BGE $s1, N, Label34
+$t1 = x[n] - x[$s1] 
+$t2 = x[n] - x[$s1] 
+$t3 = y[n] - y[$s1] 
+$t4 = y[n] - y[$s1] 
+$t5 = $t1  * $t2
+$t6 = $t3  * $t4
+$t7 = $t5  + $t6
+BGE $t7, $s2, Label35
+BEQ $s1, n, Label37
+$t0 = x[n] - x[$s1] 
+$t1 = x[n] - x[$s1] 
+$t2 = y[n] - y[$s1] 
+$t3 = y[n] - y[$s1] 
+$t4 = $t0  * $t1
+$t5 = $t2  * $t3
+$s2 = $t4  + $t5
+$s0= $s1
+Label37:
+Label35:
+$s1 = $s1  + 1
+Goto Label33
+Label34:
+$t0 = 0  - 1
+BNE $s0, $t0, Label39
+Print String Str2
+Label39:
+RET $s0
+int Nearest_Point_3 () 
+para int n
+para int N
+var int i
+var int j
+var int distance
+var int tag
+$s2= 2147483647
+$s0 = 0  - 1
+$s1= 0
+Label41:
+BGE $s1, N, Label42
+$t2 = x[n] - x[$s1] 
+$t3 = x[n] - x[$s1] 
+$t4 = y[n] - y[$s1] 
+$t5 = y[n] - y[$s1] 
+$t6 = $t2  * $t3
+$t7 = $t4  * $t5
+$t0 = $t6  + $t7
+BGE $t0, $s2, Label43
+BEQ $s1, n, Label45
+$t1 = x[n] - x[$s1] 
+$t2 = x[n] - x[$s1] 
+$t3 = y[n] - y[$s1] 
+$t4 = y[n] - y[$s1] 
+$t5 = $t1  * $t2
+$t6 = $t3  * $t4
+$s2 = $t5  + $t6
+$s0= $s1
+Label45:
+Label43:
+$s1 = $s1  + 1
+Goto Label41
+Label42:
+$t1 = 0  - 1
+BNE $s0, $t1, Label47
+Print String Str3
+Label47:
+RET $s0
+Void main () 
+const int const1= -30
+const int const2= +30
+var int N
+var int point_n
+var int tag
+var int i
+var int k
+var int correct1
+var int correct2
+Read Int $s3
+BLE $s3, 100, Label49
+$s3= 100
+Label49:
+$s1= 0
+Label51:
+BGE $s1, $s3, Label52
+Read Int $s0
+$v1= $s1
+num[$v1]= $s0
+$s1 = $s1  + 1
+Goto Label51
+Label52:
+$s1= 0
+Label53:
+BGE $s1, $s3, Label54
+Read Int $s0
+$v1= $s1
+x[$v1]= $s0
+$s1 = $s1  + 1
+Goto Label53
+Label54:
+$s1= 0
+Label55:
+BGE $s1, $s3, Label56
+Read Int $s0
+$v1= $s1
+y[$v1]= $s0
+$s1 = $s1  + 1
+Goto Label55
+Label56:
+Read Int $s2
+Print String Str4
+$t5 = const1  * const2
+$t6 = $t5  + const1
+$t7 = $t6  - const2
+Print Int $t7
+$s0= 0
+Print String Str5
+Push $s3
+Call Middle_Number_1
+$t0 = RET
+Print Int $t0
+Print String Str6
+Push $s3
+Call Middle_Number_2
+$t1 = RET
+Print Int $t1
+Print String Str7
+Push $s3
+Call Middle_Number_3
+$t2 = RET
+Print Int $t2
+Push $s3
+Call Middle_Number_1
+$t3 = RET
+Push $s3
+Call Middle_Number_2
+$t4 = RET
+BNE $t3, $t4, Label57
+Push $s3
+Call Middle_Number_2
+$t5 = RET
+Push $s3
+Call Middle_Number_3
+$t6 = RET
+BNE $t5, $t6, Label59
+Print String Str8
+$s0= 1
+Goto Label60
+Label59:
+Print String Str9
+Label60:
+Goto Label58
+Label57:
+Print String Str10
+Label58:
+$s1= 0
+Push $s2
+Push $s3
+Call Nearest_Point_1
+$t7 = RET
+$s0= $t7
+Print String Str11
+Print Int $s0
+Push $s2
+Push $s3
+Call Nearest_Point_2
+$t0 = RET
+$s0= $t0
+Print String Str12
+Print Int $s0

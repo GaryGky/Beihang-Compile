@@ -1,0 +1,1064 @@
+.data
+space: .asciiz " "
+newLine: .asciiz "\n"
+Str1: .asciiz "Can not find Nearest_Point"
+Str2: .asciiz "Can not find Nearest_Point"
+Str3: .asciiz "Can not find Nearest_Point"
+Str4: .asciiz "Caculate of const is "
+Str5: .asciiz "In function 1,Middle_Number is "
+Str6: .asciiz "In function 2,Middle_Number is "
+Str7: .asciiz "In function 3,Middle_Number is "
+Str8: .asciiz "Middle_Number Answer Correct!"
+Str9: .asciiz "Middle_Number Error1!"
+Str10: .asciiz "Middle_Number Error2!"
+Str11: .asciiz "In function 1,Nearest point is "
+Str12: .asciiz "In function 2,Nearest point is "
+takeUp: .space 3
+x: .space 400
+y: .space 400
+num: .space 400
+
+.text
+j main
+Middle_Number_1:
+sw $fp, 0($sp)
+addi $sp,$sp,-4
+move $fp,$sp
+addi $sp,$sp,-80
+addi $sp, $sp, -424
+addi $sp,$sp,-4
+sw $ra, -16($fp)
+li $k1 2
+div $a1 $k1
+mflo $s0
+li $s3 0
+li $s1 0
+li $k0 0
+addi $s5 $k0 -1
+li $k0 0
+addi $s4 $k0 -1
+li $s2 0
+li $s3 0
+Label1:
+sll $t9 $s3 2
+la $t8 num
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $s2 $k0 0
+move $v1 $s3
+sll $t9 $v1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+sw $s2 ,0($k0)
+addi $s3 $s3 1
+bge $s3, $a1, Label2
+j Label1
+Label2:
+li $s3 0
+Label3:
+li $s1 0
+li $k0 0
+addi $s5 $k0 -1
+li $k0 0
+addi $s4 $k0 -1
+li $s1 0
+Label5:
+sub $t0 $a1 $s3
+bge $s1, $t0, Label6
+sll $t9 $s1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $t1 $k0 0
+ble $t1, $s5, Label7
+sll $t9 $s1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $s5 $k0 0
+move $s4 $s1
+Label7:
+addi $s1 $s1 1
+j Label5
+Label6:
+addi $t4 $a1 -1
+sub $t5 $t4 $s3
+sll $t9 $t5 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $s2 $k0 0
+addi $t7 $a1 -1
+sub $t0 $t7 $s3
+move $v1 $t0
+sll $t9 $v1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+sw $s5 ,0($k0)
+move $v1 $s4
+sll $t9 $v1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+sw $s2 ,0($k0)
+addi $s3 $s3 1
+bge $s3, $a1, Label4
+j Label3
+Label4:
+sll $t9 $s0 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $t2 $k0 0
+move $v0 $t2
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $s0, -52($fp)
+lw $s1, -56($fp)
+lw $s2, -60($fp)
+lw $s3, -64($fp)
+lw $s4, -68($fp)
+lw $s5, -72($fp)
+lw $t0, -20($fp)
+lw $t1, -24($fp)
+lw $t2, -28($fp)
+lw $t4, -36($fp)
+lw $t5, -40($fp)
+lw $t7, -48($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+jr $ra
+Middle_Number_2:
+sw $fp, 0($sp)
+addi $sp,$sp,-4
+move $fp,$sp
+addi $sp,$sp,-80
+addi $sp, $sp, -424
+addi $sp,$sp,-4
+sw $ra, -16($fp)
+li $k1 2
+div $a1 $k1
+mflo $s0
+li $s3 0
+li $s1 0
+li $k0 0
+addi $s5 $k0 -1
+li $k0 0
+addi $s4 $k0 -1
+li $s2 0
+li $s3 0
+li $s3 0
+Label9:
+bge $s3, $a1, Label10
+sll $t9 $s3 2
+la $t8 num
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $s2 $k0 0
+move $v1 $s3
+sll $t9 $v1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+sw $s2 ,0($k0)
+addi $s3 $s3 1
+j Label9
+Label10:
+li $s3 0
+li $s3 0
+Label11:
+bge $s3, $a1, Label12
+li $s1 0
+li $k0 0
+addi $s5 $k0 -1
+li $k0 0
+addi $s4 $k0 -1
+Label13:
+sub $t2 $a1 $s3
+bge $s1, $t2, Label14
+sll $t9 $s1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $t3 $k0 0
+ble $t3, $s5, Label15
+sll $t9 $s1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $s5 $k0 0
+move $s4 $s1
+Label15:
+addi $s1 $s1 1
+j Label13
+Label14:
+addi $t6 $a1 -1
+sub $t7 $t6 $s3
+sll $t9 $t7 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $s2 $k0 0
+addi $t1 $a1 -1
+sub $t2 $t1 $s3
+move $v1 $t2
+sll $t9 $v1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+sw $s5 ,0($k0)
+move $v1 $s4
+sll $t9 $v1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+sw $s2 ,0($k0)
+addi $s3 $s3 1
+j Label11
+Label12:
+sll $t9 $s0 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $t4 $k0 0
+move $v0 $t4
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $s0, -52($fp)
+lw $s1, -56($fp)
+lw $s2, -60($fp)
+lw $s3, -64($fp)
+lw $s4, -68($fp)
+lw $s5, -72($fp)
+lw $t1, -24($fp)
+lw $t2, -28($fp)
+lw $t3, -32($fp)
+lw $t4, -36($fp)
+lw $t6, -44($fp)
+lw $t7, -48($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+jr $ra
+Middle_Number_3:
+sw $fp, 0($sp)
+addi $sp,$sp,-4
+move $fp,$sp
+addi $sp,$sp,-80
+addi $sp, $sp, -424
+addi $sp,$sp,-4
+sw $ra, -16($fp)
+li $k1 2
+div $a1 $k1
+mflo $s0
+li $s3 0
+li $s1 0
+li $k0 0
+addi $s5 $k0 -1
+li $k0 0
+addi $s4 $k0 -1
+li $s2 0
+li $s3 0
+Label17:
+bge $s3, $a1, Label18
+sll $t9 $s3 2
+la $t8 num
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $s2 $k0 0
+move $v1 $s3
+sll $t9 $v1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+sw $s2 ,0($k0)
+addi $s3 $s3 1
+j Label17
+Label18:
+li $s3 0
+Label19:
+bge $s3, $a1, Label20
+li $s1 0
+li $k0 0
+addi $s5 $k0 -1
+li $k0 0
+addi $s4 $k0 -1
+li $s1 0
+Label21:
+sub $t4 $a1 $s3
+bge $s1, $t4, Label22
+sll $t9 $s1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $t5 $k0 0
+ble $t5, $s5, Label23
+sll $t9 $s1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $s5 $k0 0
+move $s4 $s1
+Label23:
+addi $s1 $s1 1
+j Label21
+Label22:
+addi $t0 $a1 -1
+sub $t1 $t0 $s3
+sll $t9 $t1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $s2 $k0 0
+addi $t3 $a1 -1
+sub $t4 $t3 $s3
+move $v1 $t4
+sll $t9 $v1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+sw $s5 ,0($k0)
+move $v1 $s4
+sll $t9 $v1 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+sw $s2 ,0($k0)
+addi $s3 $s3 1
+j Label19
+Label20:
+sll $t9 $s0 2
+addi $t8 $fp -108
+sub $k0 $t8 $t9
+lw $k0, 0($k0)
+addi $t6 $k0 0
+move $v0 $t6
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $s0, -52($fp)
+lw $s1, -56($fp)
+lw $s2, -60($fp)
+lw $s3, -64($fp)
+lw $s4, -68($fp)
+lw $s5, -72($fp)
+lw $t0, -20($fp)
+lw $t1, -24($fp)
+lw $t3, -32($fp)
+lw $t4, -36($fp)
+lw $t5, -40($fp)
+lw $t6, -44($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+jr $ra
+Nearest_Point_1:
+sw $fp, 0($sp)
+addi $sp,$sp,-4
+move $fp,$sp
+addi $sp,$sp,-80
+addi $sp, $sp, -16
+addi $sp,$sp,-4
+sw $ra, -16($fp)
+li $s2 2147483647
+li $k0 0
+addi $s0 $k0 -1
+li $s1 0
+Label25:
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t0 $k0 $k1
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t1 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t2 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t3 $k0 $k1
+mult $t0 $t1
+mflo $t4
+mult $t2 $t3
+mflo $t5
+add $t6 $t4 $t5
+bge $t6, $s2, Label27
+beq $s1, $a1, Label29
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t7 $k0 $k1
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t0 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t1 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t2 $k0 $k1
+mult $t7 $t0
+mflo $t3
+mult $t1 $t2
+mflo $t4
+add $s2 $t3 $t4
+move $s0 $s1
+Label29:
+Label27:
+addi $s1 $s1 1
+bge $s1, $a2, Label26
+j Label25
+Label26:
+li $k0 0
+addi $t7 $k0 -1
+bne $s0, $t7, Label31
+la $a0, Str1
+li $v0, 4
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+Label31:
+move $v0 $s0
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $s0, -52($fp)
+lw $s1, -56($fp)
+lw $s2, -60($fp)
+lw $t0, -20($fp)
+lw $t1, -24($fp)
+lw $t2, -28($fp)
+lw $t3, -32($fp)
+lw $t4, -36($fp)
+lw $t5, -40($fp)
+lw $t6, -44($fp)
+lw $t7, -48($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+jr $ra
+Nearest_Point_2:
+sw $fp, 0($sp)
+addi $sp,$sp,-4
+move $fp,$sp
+addi $sp,$sp,-80
+addi $sp, $sp, -16
+addi $sp,$sp,-4
+sw $ra, -16($fp)
+li $s2 2147483647
+li $k0 0
+addi $s0 $k0 -1
+li $s1 0
+li $s1 0
+Label33:
+bge $s1, $a2, Label34
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t1 $k0 $k1
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t2 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t3 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t4 $k0 $k1
+mult $t1 $t2
+mflo $t5
+mult $t3 $t4
+mflo $t6
+add $t7 $t5 $t6
+bge $t7, $s2, Label35
+beq $s1, $a1, Label37
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t0 $k0 $k1
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t1 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t2 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t3 $k0 $k1
+mult $t0 $t1
+mflo $t4
+mult $t2 $t3
+mflo $t5
+add $s2 $t4 $t5
+move $s0 $s1
+Label37:
+Label35:
+addi $s1 $s1 1
+j Label33
+Label34:
+li $k0 0
+addi $t0 $k0 -1
+bne $s0, $t0, Label39
+la $a0, Str2
+li $v0, 4
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+Label39:
+move $v0 $s0
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $s0, -52($fp)
+lw $s1, -56($fp)
+lw $s2, -60($fp)
+lw $t0, -20($fp)
+lw $t1, -24($fp)
+lw $t2, -28($fp)
+lw $t3, -32($fp)
+lw $t4, -36($fp)
+lw $t5, -40($fp)
+lw $t6, -44($fp)
+lw $t7, -48($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+jr $ra
+Nearest_Point_3:
+sw $fp, 0($sp)
+addi $sp,$sp,-4
+move $fp,$sp
+addi $sp,$sp,-80
+addi $sp, $sp, -16
+addi $sp,$sp,-4
+sw $ra, -16($fp)
+li $s2 2147483647
+li $k0 0
+addi $s0 $k0 -1
+li $s1 0
+Label41:
+bge $s1, $a2, Label42
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t2 $k0 $k1
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t3 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t4 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t5 $k0 $k1
+mult $t2 $t3
+mflo $t6
+mult $t4 $t5
+mflo $t7
+add $t0 $t6 $t7
+bge $t0, $s2, Label43
+beq $s1, $a1, Label45
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t1 $k0 $k1
+sll $t9 $a1 2
+la $t8 x
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 x
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t2 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t3 $k0 $k1
+sll $t9 $a1 2
+la $t8 y
+add $k0 $t8 $t9
+lw $k0, 0($k0)
+sll $t9 $s1 2
+la $t8 y
+add $k1 $t8 $t9
+lw $k1, 0($k1)
+sub $t4 $k0 $k1
+mult $t1 $t2
+mflo $t5
+mult $t3 $t4
+mflo $t6
+add $s2 $t5 $t6
+move $s0 $s1
+Label45:
+Label43:
+addi $s1 $s1 1
+j Label41
+Label42:
+li $k0 0
+addi $t1 $k0 -1
+bne $s0, $t1, Label47
+la $a0, Str3
+li $v0, 4
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+Label47:
+move $v0 $s0
+lw $ra,-16($fp)
+addi $sp,$fp,4
+lw $fp, 4($fp)
+lw $s0, -52($fp)
+lw $s1, -56($fp)
+lw $s2, -60($fp)
+lw $t0, -20($fp)
+lw $t1, -24($fp)
+lw $t2, -28($fp)
+lw $t3, -32($fp)
+lw $t4, -36($fp)
+lw $t5, -40($fp)
+lw $t6, -44($fp)
+lw $t7, -48($fp)
+lw $a1, -4($fp)
+lw $a2, -8($fp)
+lw $a3, -12($fp)
+jr $ra
+main:
+sw $fp, 0($sp)
+addi $sp,$sp,-4
+move $fp,$sp
+addi $sp,$sp,-80
+addi $sp, $sp, -28
+addi $sp,$sp,-4
+sw $ra, -16($fp)
+li $v0,5
+syscall
+move $s3 $v0
+ble $s3, 100, Label49
+li $s3 100
+Label49:
+li $s1 0
+Label51:
+bge $s1, $s3, Label52
+li $v0,5
+syscall
+move $s0 $v0
+move $v1 $s1
+sll $t9 $v1 2
+la $t8 num
+add $k0 $t8 $t9
+sw $s0 0($k0)
+addi $s1 $s1 1
+j Label51
+Label52:
+li $s1 0
+Label53:
+bge $s1, $s3, Label54
+li $v0,5
+syscall
+move $s0 $v0
+move $v1 $s1
+sll $t9 $v1 2
+la $t8 x
+add $k0 $t8 $t9
+sw $s0 0($k0)
+addi $s1 $s1 1
+j Label53
+Label54:
+li $s1 0
+Label55:
+bge $s1, $s3, Label56
+li $v0,5
+syscall
+move $s0 $v0
+move $v1 $s1
+sll $t9 $v1 2
+la $t8 y
+add $k0 $t8 $t9
+sw $s0 0($k0)
+addi $s1 $s1 1
+j Label55
+Label56:
+li $v0,5
+syscall
+move $s2 $v0
+la $a0, Str4
+li $v0, 4
+syscall
+li $k0 -30
+li $k1 +30
+mult $k0 $k1
+mflo $t5
+li $k1 -30
+add $t6 $t5 $k1
+li $k1 +30
+sub $t7 $t6 $k1
+move $a0 $t7
+li $v0, 1
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+li $s0 0
+la $a0, Str5
+li $v0, 4
+syscall
+sw $s0, -52($fp)
+sw $s1, -56($fp)
+sw $s2, -60($fp)
+sw $s3, -64($fp)
+sw $s4, -68($fp)
+sw $s5, -72($fp)
+sw $t0, -20($fp)
+sw $t1, -24($fp)
+sw $t2, -28($fp)
+sw $t4, -36($fp)
+sw $t5, -40($fp)
+sw $t7, -48($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+move $a1 $s3
+jal Middle_Number_1
+move $t0, $v0
+move $a0 $t0
+li $v0, 1
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+la $a0, Str6
+li $v0, 4
+syscall
+sw $s0, -52($fp)
+sw $s1, -56($fp)
+sw $s2, -60($fp)
+sw $s3, -64($fp)
+sw $s4, -68($fp)
+sw $s5, -72($fp)
+sw $t1, -24($fp)
+sw $t2, -28($fp)
+sw $t3, -32($fp)
+sw $t4, -36($fp)
+sw $t6, -44($fp)
+sw $t7, -48($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+move $a1 $s3
+jal Middle_Number_2
+move $t1, $v0
+move $a0 $t1
+li $v0, 1
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+la $a0, Str7
+li $v0, 4
+syscall
+sw $s0, -52($fp)
+sw $s1, -56($fp)
+sw $s2, -60($fp)
+sw $s3, -64($fp)
+sw $s4, -68($fp)
+sw $s5, -72($fp)
+sw $t0, -20($fp)
+sw $t1, -24($fp)
+sw $t3, -32($fp)
+sw $t4, -36($fp)
+sw $t5, -40($fp)
+sw $t6, -44($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+move $a1 $s3
+jal Middle_Number_3
+move $t2, $v0
+move $a0 $t2
+li $v0, 1
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+sw $s0, -52($fp)
+sw $s1, -56($fp)
+sw $s2, -60($fp)
+sw $s3, -64($fp)
+sw $s4, -68($fp)
+sw $s5, -72($fp)
+sw $t0, -20($fp)
+sw $t1, -24($fp)
+sw $t2, -28($fp)
+sw $t4, -36($fp)
+sw $t5, -40($fp)
+sw $t7, -48($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+move $a1 $s3
+jal Middle_Number_1
+move $t3, $v0
+sw $s0, -52($fp)
+sw $s1, -56($fp)
+sw $s2, -60($fp)
+sw $s3, -64($fp)
+sw $s4, -68($fp)
+sw $s5, -72($fp)
+sw $t1, -24($fp)
+sw $t2, -28($fp)
+sw $t3, -32($fp)
+sw $t4, -36($fp)
+sw $t6, -44($fp)
+sw $t7, -48($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+move $a1 $s3
+jal Middle_Number_2
+move $t4, $v0
+bne $t3, $t4, Label57
+sw $s0, -52($fp)
+sw $s1, -56($fp)
+sw $s2, -60($fp)
+sw $s3, -64($fp)
+sw $s4, -68($fp)
+sw $s5, -72($fp)
+sw $t1, -24($fp)
+sw $t2, -28($fp)
+sw $t3, -32($fp)
+sw $t4, -36($fp)
+sw $t6, -44($fp)
+sw $t7, -48($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+move $a1 $s3
+jal Middle_Number_2
+move $t5, $v0
+sw $s0, -52($fp)
+sw $s1, -56($fp)
+sw $s2, -60($fp)
+sw $s3, -64($fp)
+sw $s4, -68($fp)
+sw $s5, -72($fp)
+sw $t0, -20($fp)
+sw $t1, -24($fp)
+sw $t3, -32($fp)
+sw $t4, -36($fp)
+sw $t5, -40($fp)
+sw $t6, -44($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+move $a1 $s3
+jal Middle_Number_3
+move $t6, $v0
+bne $t5, $t6, Label59
+la $a0, Str8
+li $v0, 4
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+li $s0 1
+j Label60
+Label59:
+la $a0, Str9
+li $v0, 4
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+Label60:
+j Label58
+Label57:
+la $a0, Str10
+li $v0, 4
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+Label58:
+li $s1 0
+sw $s0, -52($fp)
+sw $s1, -56($fp)
+sw $s2, -60($fp)
+sw $t0, -20($fp)
+sw $t1, -24($fp)
+sw $t2, -28($fp)
+sw $t3, -32($fp)
+sw $t4, -36($fp)
+sw $t5, -40($fp)
+sw $t6, -44($fp)
+sw $t7, -48($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+move $a1 $s2
+move $a2 $s3
+jal Nearest_Point_1
+move $t7, $v0
+move $s0 $t7
+la $a0, Str11
+li $v0, 4
+syscall
+move $a0 $s0
+li $v0, 1
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
+sw $s0, -52($fp)
+sw $s1, -56($fp)
+sw $s2, -60($fp)
+sw $t0, -20($fp)
+sw $t1, -24($fp)
+sw $t2, -28($fp)
+sw $t3, -32($fp)
+sw $t4, -36($fp)
+sw $t5, -40($fp)
+sw $t6, -44($fp)
+sw $t7, -48($fp)
+sw $a1, -4($fp)
+sw $a2, -8($fp)
+sw $a3, -12($fp)
+move $a1 $s2
+move $a2 $s3
+jal Nearest_Point_2
+move $t0, $v0
+move $s0 $t0
+la $a0, Str12
+li $v0, 4
+syscall
+move $a0 $s0
+li $v0, 1
+syscall
+la $a0, newLine
+li $v0, 4
+syscall
