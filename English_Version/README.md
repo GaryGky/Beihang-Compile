@@ -4,17 +4,13 @@
 
 [TOC]
 
-
-
 ### To See the Statistic of my code
 
 ```
 cloc-1.64.exe ./
 ```
 
-![1577495481912](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1577495481912.png)
-
-
+![1577495481912](README\1577495481912.png)
 
 ### How To Run it and See the result
 
@@ -59,7 +55,7 @@ cloc-1.64.exe ./
 
 ## `BackENd`
 
-![1577497691607](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1577497691607.png)
+![1577497691607](README/1577497691607.png)
 
 #### `BasicBlock`
 
@@ -166,11 +162,11 @@ enum ReturnError {
 cmd :: tree -f 
 ```
 
-![1577495927619](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1577495927619.png)
+![1577495927619](README/1577495927619.png)
 
 
 
-![1577495960652](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1577495960652.png)
+![1577495960652](README/1577495960652.png)
 
 ## `Show you The Case`
 
@@ -200,7 +196,7 @@ see in mips.txt
 
 ### `Running On Mars`
 
-![1577499153956](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\1577499153956.png)
+![1577499153956](README/1577499153956.png)
 
 ```
 Then You can see the result in the console...
