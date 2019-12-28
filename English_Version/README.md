@@ -10,7 +10,7 @@
 cloc-1.64.exe ./
 ```
 
-![1577495481912](README\1577495481912.png)
+![1577495481912](README/1577495481912.png)
 
 ### How To Run it and See the result
 
