@@ -1,0 +1,198 @@
+const int num1= 1024
+array int str[10]
+array int abc[10]
+var char testCh
+array int testnum[10]
+var int a
+var int b
+int print_global () 
+Print String Str1
+Print Int a
+Print String Str2
+Print Int b
+RET 0
+int local_same_name () 
+para int a
+para int b
+Print String Str3
+$t1 = a  + b
+Print Int $t1
+$t2 = 2  * a
+a= $t2
+$t3 = 2  * b
+b= $t3
+Print String Str4
+$t4 = a  + b
+Print Int $t4
+RET 0
+int global_variable () 
+para int to_a
+para int to_b
+Print String Str5
+$t5 = a  + b
+Print Int $t5
+a= to_a
+b= to_b
+RET 0
+char getCh () 
+Rear Char testCh
+RET testCh
+int init_str () 
+para int num1
+var int i
+var int num2
+$s1= 0
+$s0= 10
+$s1= 0
+Label1:
+BGE $s1, 10, Label2
+$v1= $s1
+$t6 = $s1  + $s0
+$t7 = $t6  + 2
+$t0 = $t7  - 1
+$t1 = $t0  - $s0
+str[$v1]= $t1
+$s1 = $s1  + 1
+Goto Label1
+Label2:
+RET 0
+int init_abc () 
+para int num2
+var int i
+$s0= 0
+$s0= 0
+Label3:
+BGE $s0, 10, Label4
+$v1= $s0
+$t3 = 10  - $s0
+$t4 = $t3  + num2
+$t5 = $t4  + 2
+$t6 = $t5  - 2
+$t7 = $t6  - num2
+abc[$v1]= $t7
+$s0 = $s0  + 1
+Goto Label3
+Label4:
+RET 0
+int Factorial () 
+para int i
+BLE i, 1, Label5
+$t1 = i  - 1
+Push $t1
+Call Factorial
+$t2 = RET
+$t3 = i  * $t2
+RET $t3
+Goto Label6
+Label5:
+RET 1
+Label6:
+int init () 
+para int i
+var int j
+$s0= 0
+Label7:
+BGE $s0, i, Label8
+$v1= $s0
+Push $s0
+Call Factorial
+$t4 = RET
+$t5 = $t4  + $s0
+testnum[$v1]= $t5
+$s0 = $s0  + 1
+Goto Label7
+Label8:
+RET 0
+Void main () 
+const int num_0= 0
+const int num1= 100
+var int i
+var char testch
+Print String Str6
+Call getCh
+$t7 = RET
+Print Char $t7
+Read Int a
+Read Int b
+Print String Str7
+$t0 = a  + b
+Print Int $t0
+Push 100
+Push 200
+Call local_same_name
+$t1 = RET
+Push 2152
+Push 14243
+Call global_variable
+$t2 = RET
+Print String Str8
+$t3 = a  + b
+Print Int $t3
+Push 10
+Call init_abc
+$t4 = RET
+Push 512
+Call init_str
+$t5 = RET
+Push 10
+Call init
+$t6 = RET
+$t7 = abc[3] + 0
+$t0 = str[$t7] + 0
+$v1= $t0
+str[$v1]= 0
+$t1 = str[8] + 0
+$t2 = abc[$t1] + 0
+$t3 = str[$t2] + 0
+$v1= $t3
+str[$v1]= 0
+$t4 = abc[5] + 0
+$t5 = abc[$t4] + 0
+$v1= $t5
+abc[$v1]= 0
+$t6 = str[7] + 0
+$t7 = abc[$t6] + 0
+$t0 = str[$t7] + 0
+$v1= $t0
+abc[$v1]= 0
+$t1 = abc[8] + 0
+$t2 = abc[$t1] + 0
+$t3 = abc[$t2] + 0
+$t4 = str[$t3] + 0
+$t5 = str[$t4] + 0
+$v1= $t5
+$t6 = str[3] + 0
+$t7 = abc[$t6] + 0
+$t0 = str[$t7] + 0
+$t1 = abc[7] + 0
+$t2 = str[$t1] + 0
+$t3 = abc[$t2] + 0
+$t4 = str[$t0] + abc[$t3] 
+abc[$v1]= $t4
+Print String Str9
+$t5 = abc[8] + 0
+$t6 = abc[$t5] + 0
+$t7 = abc[$t6] + 0
+$t0 = str[$t7] + 0
+$t1 = str[$t0] + 0
+$t2 = abc[$t1] + 0
+Print Int $t2
+$t3 = testnum[8] - 8
+$t4 = testnum[7] - 7
+$t5 = $t3  / $t4
+$t6 = testnum[7] - 7
+$t7 = testnum[6] - 6
+$t0 = testnum[5] - 5
+$t1 = $t7  / $t0
+$t2 = testnum[$t1] - 6
+$t3 = testnum[5] - 5
+$t4 = testnum[$t5] / $t6
+$t5 = $t2  / $t3
+$t6 = $t4  - $t5
+$t7 = testnum[$t6] + 0
+Print Int $t7
+Push 3
+Call Factorial
+$t0 = RET
+$t1 = testnum[$t0] + 0
+Print Int $t1

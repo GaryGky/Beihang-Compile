@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="codeGenProejct" targetName="codeGenProejct" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0618cedc-ea8c-497c-b745-38a6034465a8" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FavoritesManager">
+    <favorites_list name="codeGenProejct" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Beihang-Compile" />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1T88vxBFAFfWFDIWQuR8UTS3GxC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ErrorParse" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Junior\Compile\CompilerOO\codeGenProejct\BackEnd\Source" />
+      <recent name="E:\Junior\Compile\CompilerOO\codeGenProejct\BackEnd\Header" />
+      <recent name="E:\Junior\Compile\CompilerOO\codeGenProejct\ErrorParse\Source" />
+      <recent name="E:\Junior\Compile\CompilerOO\codeGenProejct\ErrorParse\Header" />
+      <recent name="E:\Junior\Compile\CompilerOO\codeGenProejct\FrontEnd\Source" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="codeGenProejct" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--std=c++11" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="codeGenProejct" TARGET_NAME="codeGenProejct" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="codeGenProejct" RUN_TARGET_NAME="codeGenProejct">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0618cedc-ea8c-497c-b745-38a6034465a8" name="Default Changelist" comment="" />
+      <created>1572830596702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572830596702</updated>
+      <workItem from="1572830603487" duration="453000" />
+      <workItem from="1572869437543" duration="3964000" />
+      <workItem from="1572875532906" duration="3082000" />
+      <workItem from="1572950128884" duration="465000" />
+      <workItem from="1572951730457" duration="6023000" />
+      <workItem from="1572960522302" duration="5050000" />
+      <workItem from="1573037049427" duration="11742000" />
+      <workItem from="1573208547885" duration="13066000" />
+      <workItem from="1573262540494" duration="6971000" />
+      <workItem from="1573298418359" duration="5967000" />
+      <workItem from="1573438833821" duration="3248000" />
+      <workItem from="1573462548951" duration="1480000" />
+      <workItem from="1573483680243" duration="796000" />
+      <workItem from="1573543747022" duration="13087000" />
+      <workItem from="1573562527153" duration="6818000" />
+      <workItem from="1573612827810" duration="3521000" />
+      <workItem from="1573644633117" duration="12610000" />
+      <workItem from="1573715558773" duration="5485000" />
+      <workItem from="1573721159203" duration="11182000" />
+      <workItem from="1573737894829" duration="6422000" />
+      <workItem from="1573799343393" duration="3382000" />
+      <workItem from="1573803815542" duration="3563000" />
+      <workItem from="1573818924243" duration="9727000" />
+      <workItem from="1573867614947" duration="6956000" />
+      <workItem from="1574249267231" duration="10730000" />
+      <workItem from="1574324176535" duration="11868000" />
+      <workItem from="1574486444658" duration="7399000" />
+      <workItem from="1574512803400" duration="1612000" />
+      <workItem from="1574645641115" duration="8140000" />
+      <workItem from="1574665554609" duration="7347000" />
+      <workItem from="1574679292624" duration="16104000" />
+      <workItem from="1574748911659" duration="11680000" />
+      <workItem from="1574764569996" duration="1253000" />
+      <workItem from="1574767513736" duration="5154000" />
+      <workItem from="1575090576668" duration="815000" />
+      <workItem from="1575107051983" duration="2605000" />
+      <workItem from="1575113740212" duration="105000" />
+      <workItem from="1575114452438" duration="6000" />
+      <workItem from="1575115281311" duration="322000" />
+      <workItem from="1575455526893" duration="13687000" />
+      <workItem from="1575533898318" duration="2426000" />
+      <workItem from="1575544921199" duration="7198000" />
+      <workItem from="1575977021546" duration="2893000" />
+      <workItem from="1576045931783" duration="8085000" />
+      <workItem from="1576064603340" duration="6820000" />
+      <workItem from="1576071814878" duration="2427000" />
+      <workItem from="1576120600680" duration="2732000" />
+      <workItem from="1576142444939" duration="2395000" />
+      <workItem from="1576156367882" duration="5275000" />
+      <workItem from="1576200092507" duration="2077000" />
+      <workItem from="1576220413480" duration="2335000" />
+      <workItem from="1576226514002" duration="632000" />
+      <workItem from="1576234458714" duration="15104000" />
+      <workItem from="1576287391485" duration="16692000" />
+      <workItem from="1576321641889" duration="3682000" />
+      <workItem from="1576326389827" duration="10575000" />
+      <workItem from="1576573465718" duration="2964000" />
+      <workItem from="1576581303026" duration="60000" />
+      <workItem from="1576582077338" duration="4157000" />
+      <workItem from="1576586432359" duration="399000" />
+      <workItem from="1576731794429" duration="9000" />
+      <workItem from="1576733820421" duration="2454000" />
+      <workItem from="1576739076954" duration="4968000" />
+      <workItem from="1576744877183" duration="7069000" />
+      <workItem from="1576763297645" duration="3208000" />
+      <workItem from="1576846476519" duration="5447000" />
+      <workItem from="1576852527405" duration="870000" />
+      <workItem from="1576889290927" duration="4289000" />
+      <workItem from="1576979463466" duration="2069000" />
+      <workItem from="1576982543524" duration="706000" />
+      <workItem from="1577019289799" duration="2336000" />
+      <workItem from="1577111739437" duration="718000" />
+      <workItem from="1577188311998" duration="1101000" />
+      <workItem from="1577494763104" duration="3386000" />
+      <workItem from="1577498829930" duration="385000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/BackEnd/Source/MipsGenerator.cpp</url>
+          <line>103</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

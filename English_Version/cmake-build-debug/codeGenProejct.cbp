@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="codeGenProejct"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="codeGenProejct">
+				<Option output="E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/codeGenProejct.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:\llvm\mingw64\include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 codeGenProejct"/>
+					<CompileFile command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="codeGenProejct/fast">
+				<Option output="E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/codeGenProejct.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="D:/llvm/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:\llvm\mingw64\include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 codeGenProejct/fast"/>
+					<CompileFile command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/llvm/mingw64/bin/mingw32-make.exe -f &quot;E:/Junior/Compile/CompilerOO/codeGenProejct/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Header/BasicBlock.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Header/FlowGraph.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Header/FourComExpr.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Header/MipsGenerator.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Header/Optimizer.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Source/BasicBlock.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Source/FlowGraph.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Source/FourComExpr.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Source/MipsGenerator.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/BackEnd/Source/Optimizer.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/EnumClass.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Header/ErrorLexicalParser.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Header/ErrorParse.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Header/ErrorSymbolItem.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Header/ErrorSymbolTabel.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Header/ErrorSyntaxParser.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Source/ErrorLexicalParser.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Source/ErrorParse.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Source/ErrorSymbolItem.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Source/ErrorSymbolTabel.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/ErrorParse/Source/ErrorSyntaxParser.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/FrontEnd/Header/LexicalParser.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/FrontEnd/Header/SymbolItem.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/FrontEnd/Header/SymbolTabel.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/FrontEnd/Header/SyntaxParser.h">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/FrontEnd/Source/LexicalParser.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/FrontEnd/Source/SymbolItem.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/FrontEnd/Source/SymbolTabel.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/FrontEnd/Source/SyntaxParser.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/main.cpp">
+			<Option target="codeGenProejct"/>
+		</Unit>
+		<Unit filename="E:/Junior/Compile/CompilerOO/codeGenProejct/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
